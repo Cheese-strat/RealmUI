@@ -4,8 +4,12 @@
   "description": "My Electron application",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npm run compile && npm run electron",
-    "compile": "tsc .",
+    "start": "npm-run-all clean:* && npm-run-all compile:* && npm run electron",
+    "compile:typescript": "tsc",
+    "compile:copy_html": "copy /y src\\html\\*.html dist\\html\\",
+    "compile:copy_css": "copy /y src\\css\\*.css dist\\css\\",
+    "clean:html": "del /Q dist\\html\\",
+    "clean:css": "del /Q dist\\html\\",
     "electron": "electron dist/index.js"
   },
   "keywords": [],
@@ -15,9 +19,12 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "npm-run-all": "^4.1.5",
     "typescript": "^4.2.3"
   },
   "dependencies": {
-    "electron": "12.0.1"
+    "electron": "12.0.1",
+    "electron-squirrel-startup": "^1.0.0"
   }
 }

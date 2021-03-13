@@ -5,10 +5,10 @@
     "target": "ESNEXT",
     "module": "commonjs",
 
-    "lib": [],
+    "lib": ["DOM"],
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
     "outDir": "./dist",
-    "rootDir": "./",
+    "rootDir": "./src",
     "removeComments": true,
     "importHelpers": false,
     "downlevelIteration": true,
@@ -29,6 +29,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*","src/assets/*"],
   "exclude": ["/node_modules"]
 }

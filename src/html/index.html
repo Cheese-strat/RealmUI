@@ -8,32 +8,17 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Jocca HTML5 Template</title>
+	<title>RealmUI</title>
 
 	<!-- stylesheets -->
-	<link rel="stylesheet" href="../css/reset.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="../css/styles.css" type="text/css" media="screen" />
 
-	<!-- footer files css (including footer media queries) -->
+	<link rel="stylesheet" href="../css/styles.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="../css/footer-distributed.css">
 
-	<!-- media queries -->
-	<link rel="stylesheet" href="../css/media-queries.css" type="text/css" media="screen" />
 
-	<!-- Fonts (Jocca edit: I switched the fonts: <link href='http://fonts.googleapis.com/css?family=Open+Sans|Baumans' 
-	rel='stylesheet' type='text/css'> ) -->
+	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
 
-
-	<!-- backwards compatible margin-correction -->
-	<!--[if lt IE 9]>
-            <style>
-                header
-                {
-                    margin: 0 auto 20px auto;
-                }                 
-            </style>
-        <![endif]-->
 </head>
 
 <body>
@@ -43,28 +28,6 @@
 			falls below the max-width assigned in the media queries. See DOM/css layout in Firebug-Firefox or 
 			development console's in other browsers. 
 			See also script.js -->
-		<div class="toggleMobile">
-			<span class="symbol-bar1"></span>
-			<span class="symbol-bar2"></span>
-			<span class="symbol-bar3"></span>
-		</div>
-
-		<div id="mobileMenu">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<!-- Jocca edit: javascript:void(0) does nothing because the expression "0" has no 
-					effect in JavaScript: <a href="javascript:void(0)">Home</a>. 
-				 	The expression "0" is evaluated, but it is not loaded back into the current document. 
-					So we can use it for this testmenu since we have no other menu content 
-					(a href="" works too but then the page tries to load something and shows white for 
-					a lot of milliseconds).		 	
-				 	Jocca update: turns out the # sign works just as fine as javascript:void(0), 
-					# is simpler, no suggestion of javascripts that you should use and at the bottom 
-					of the viewport the url-link is shown -->
-				<li><a href="#">Porfolio</a></li>
-				<li><a href="#">About</a></li>
-			</ul>
-		</div>
 
 		<a href="index.html">
 			<h1>Jocca HTML5</h1>
@@ -86,116 +49,67 @@
 
 	</header>
 	<!-- the spacer -->
-	<section id="spacer">
 
-		<div class="spacer-wrapper">
-
-			<form action="#">
-				<!-- after clicking/tapping the search button, the site remains on the search 
-					result link while refreshing 
-					( index.html?sitesearch=Enter+a+word...&start_search=Search# ). 
-					So we have to return to index.html explicitly for further testing. I added a link 
-					to itself (index.html) on the logo, see the header -->
-				<input type="text" name="sitesearch" value="Enter a word ..." />
-				<input type="submit" name="start_search" class="button" value="Search" />
-			</form>
-
-		</div>
-	</section>
 	<!-- three columns -->
-	<section id="three-columns">
 
-		<div class="three-columns-wrapper">
+	<div class="three-columns-wrapper">
 
-			<article>
-				<h3>First Article</h3>
+		<article>
+			<h3>First Article</h3>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nisl felis, interdum sit
-					amet bibendum ut, blandit varius sapiens.</p>
-			</article>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nisl felis, interdum sit
+				amet bibendum ut, blandit varius sapiens.</p>
+		</article>
 
-			<article>
+		<article>
 
-				<h3>Second Article</h3>
+			<h3>Second Article</h3>
 
-				<p>Mauris id risus quis ante volutpat aliquet. Aenean in ultricies leo. Phasellus sodales nec
-					massa eget interdum.</p>
-			</article>
+			<p>Mauris id risus quis ante volutpat aliquet. Aenean in ultricies leo. Phasellus sodales nec
+				massa eget interdum.</p>
+		</article>
 
-			<article>
-				<h3>Third Article</h3>
+		<article>
+			<h3>Third Article</h3>
 
-				<p>Vivamus hendrerit pharetra lacus, ultricies lobortis augue porttitor eu.
-					Praesent fermentum commodo quam, non fringilla urna ornare at.</p>
-			</article>
+			<p>Vivamus hendrerit pharetra lacus, ultricies lobortis augue porttitor eu.
+				Praesent fermentum commodo quam, non fringilla urna ornare at.</p>
+		</article>
 
-		</div><!-- end three columns-wrapper -->
+	</div><!-- end three columns-wrapper -->
 
-		<!-- Jocca edit: during (in this case horizontal) alignment of sections 
-				(including header, footer, article etc) elements need to be cleared to keep proper 
-				vertical alignment of all sections. -->
-		<br class="clear" />
+	<article>
+		<h3>Big Article</h3>
 
-	</section>
-	<!-- ONE BIG TWO SMALL (obts) Section -->
-	<section id="obts">
+		<p>This is an HTML5 Responsive template. I was inspired by a few tutorials, but I intensively
+			rewrote the code to get a good working knowledge of the html, css and javascript involved.
+			So I can say I handcoded this template myself in HTML5 and CSS3. Should be browser-compatible
+			from IE7.<br>See the source code for the tutorial-links and my additional comments
+			if you like.</p>
 
-		<div class="obts-wrapper">
-
-			<article>
-				<h3>Big Article</h3>
-
-				<p>This is an HTML5 Responsive template. I was inspired by a few tutorials, but I intensively
-					rewrote the code to get a good working knowledge of the html, css and javascript involved.
-					So I can say I handcoded this template myself in HTML5 and CSS3. Should be browser-compatible
-					from IE7.<br>See the source code for the tutorial-links and my additional comments
-					if you like.</p>
-
-				<p>Praesent nec augue dapibus, sollicitudin tellus eget, tincidunt lorem. Suspendisse lacinia ex
-					at dolor egestas pulvinar. Sed efficitur vestibulum leo et semper. Morbi condimentum nisi
-					eu urna maximus, vitae suscipit massa convallis. Donec dapibus augue turpis. Suspendisse
-					auctor luctus imperdiet. Pellentesque euismod ipsum vel tellus laoreet ultrices.</p>
-			</article>
-
-			<section id="ts">
-
-				<article class="row">
+		<p>Praesent nec augue dapibus, sollicitudin tellus eget, tincidunt lorem. Suspendisse lacinia ex
+			at dolor egestas pulvinar. Sed efficitur vestibulum leo et semper. Morbi condimentum nisi
+			eu urna maximus, vitae suscipit massa convallis. Donec dapibus augue turpis. Suspendisse
+			auctor luctus imperdiet. Pellentesque euismod ipsum vel tellus laoreet ultrices.</p>
+	</article>
 
 
-					<p>Sed efficitur vestibulum leo et semper. Morbi condimentum nisi eu urna maximus, vitae suscipit
-						massa convallis.</p>
-				</article>
-
-				<article class="row">
 
 
-					<p>Fusce in accumsan dolor. Suspendisse et malesuada nisl. Suspendisse auctor luctus imperdiet.</p>
-				</article>
-
-			</section>
-
-		</div> <!-- end obts-wrapper -->
-
-		<br class="clear" />
-	</section>
-
-
-	<footer class="footer-distributed">
+	<footer class="footer">
 
 		<div class="footer-wrapper">
 
-			<p class="footer-links">
+			<p class="footer-left">
 
 				<a href="#">Home</a>
-				·
+
 				<a href="#">Portfolio</a>
-				·
+
 				<a href="#">About</a>
-				·
+
 				<a href="#">Contact</a>
 			</p>
-
-			<p>JoccaWeb &copy; 2016</p>
 
 			<div class="footer-right">
 				<!-- the social media icons from Bootstrap CDN: -->

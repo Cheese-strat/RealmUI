@@ -9,7 +9,7 @@
     "compile:copy_html": "copy /y src\\html\\*.html dist\\html\\",
     "compile:copy_css": "copy /y src\\css\\*.css dist\\css\\",
     "clean:html": "del /Q dist\\html\\",
-    "clean:css": "del /Q dist\\html\\",
+    "clean:css": "del /Q dist\\css\\",
     "electron": "electron dist/index.js"
   },
   "keywords": [],

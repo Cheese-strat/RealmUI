@@ -7,8 +7,8 @@ function createWindow() {
 			nodeIntegration: true,
 		},
 	});
-
-	win.loadFile("html/index.html");
+	const mobile = false;
+	win.loadFile(mobile ? "html/mobile/index.html" : "html/index.html");
 }
 
 app.whenReady().then(createWindow);

@@ -3,9 +3,6 @@
 	/* position: relative; not needed*/
 	background: #3b00b3; /* violet-ish */
 	/* background-color: #292c2f; dark grey */
-	/* see http://www.w3schools.com/css/css3_shadows.asp */
-	/* box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12); i don't see a box-shadow... */
-	/* see http://www.w3schools.com/css/css3_box-sizing.asp, box-sizing: border-box was applied for this footer, but i disabled/removed it, because the rest of the site doesn't have it. */	
 	/* width: 100%;	not needed since footer wrapper*/	
 	/* font: normal 16px sans-serif; disabled this, was already applied in rest of site */	
 	height: 80px;	

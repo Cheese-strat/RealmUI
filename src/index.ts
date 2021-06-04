@@ -1,14 +1,18 @@
-import { BrowserWindow, ipcMain, nativeTheme, app } from "electron";
-function createWindow() {
+import { BrowserWindow, ipcMain, app } from "electron";
+async function createWindow() {
 	const win = new BrowserWindow({
-		width: 800,
-		height: 600,
+		width: 1600,
+		height: 700,
+
 		webPreferences: {
 			nodeIntegration: true,
 		},
+		fullscreen: false,
+		autoHideMenuBar: true,
 	});
-	const mobile = false;
-	win.loadFile(mobile ? "html/mobile/index.html" : "html/index.html");
+	win.loadFile("html/loading.html");
+	await sleep(10);
+	win.loadFile("html/index.html");
 }
 
 app.whenReady().then(createWindow);
@@ -24,3 +28,7 @@ app.on("activate", () => {
 		createWindow();
 	}
 });
+app.name = "RealmUI";
+async function sleep(time: number) {
+	return new Promise(r => setTimeout(r, time * 1000));
+}

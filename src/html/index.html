@@ -11,27 +11,15 @@
 	<!-- stylesheets -->
 
 	<link rel="stylesheet" href="../css/styles.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="../css/footer-distributed.css">
+	<link rel="stylesheet" href="../css/footer.css">
 
 	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
-
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
 <body>
 	<header>
-		<a href="index.html">
-			<h1>RealmUI</h1>
-		</a>
-		<p>A User Interface for RealmAPI</p>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">docs</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">guide</a></li>
-			</ul>
-		</nav>
+		<div id="header"></div>
 	</header>
 
 	<div class="textblock">
@@ -42,20 +30,14 @@
 			auctor luctus imperdiet. Pellentesque euismod ipsum vel tellus laoreet ultrices.</p>
 	</div>
 
-	<footer class="footer">
-		<div class="footer-wrapper">
-			<p class="footer-left">
-				<a href="#">Home</a>
-			</p>
-			<div class="footer-right">
-				<!-- the social media icons from Bootstrap CDN: -->
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
-				<a href="#"><i class="fa fa-github"></i></a>
-			</div>
-		</div>
-	</footer>
+	<div id="footer">
+	</div>
+	<script>
+		$(function () {
+			$("#header").load("header.html");
+			$("#footer").load("footer.html");
+		});
+	</script>
 </body>
 
 </html>

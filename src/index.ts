@@ -12,6 +12,7 @@ async function createWindow() {
 	});
 	win.loadFile("html/loading.html");
 	await sleep(10);
+	win.webContents.session;
 	win.loadFile("html/index.html");
 }
 

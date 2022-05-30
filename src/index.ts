@@ -3,16 +3,17 @@ async function createWindow() {
 	const win = new BrowserWindow({
 		width: 1600,
 		height: 700,
-
 		webPreferences: {
 			nodeIntegration: true,
 		},
 		fullscreen: false,
 		autoHideMenuBar: true,
 	});
+	/*
+	creating a transition requires for the scenes to be the same on ending and starting frames before calling window.location.href=""
+	*/
 	win.loadFile("html/loading.html");
 	await sleep(10);
-	win.webContents.session;
 	win.loadFile("html/index.html");
 }
 

@@ -8,7 +8,9 @@
     "compile:typescript": "tsc",
     "compile:copy_html": "copy /y src\\html\\*.html dist\\html\\",
     "compile:copy_css": "copy /y src\\css\\*.css dist\\css\\",
+    "compile:copy_js": "copy /y src\\js\\*.js dist\\js\\",
     "clean:html": "del /Q dist\\html\\",
+    "clean:js": "del /Q dist\\html\\",
     "clean:css": "del /Q dist\\css\\",
     "electron": "electron dist/index.js"
   },
